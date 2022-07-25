@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Exo:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <!--    Start Section     -->
+        <div id="start">Start Quiz</div>
+
+        <!--    Guide Section    -->
+        <div id="guide">
+            <h2>Quiz Guide</h2>
+            <h4>1. You Have Only 60 Seconds For Each Questions.</h4>
+            <h4>2. Once You Select Your Answer.It Can't Be Undone.</h4>
+            <h4>3. You'll Get Points On The Basic Of Your Correct Answers.</h4>
+            <h4>4. You Can't Exit From The Quiz While You Are Playing.</h4>
+            <div id="button">
+                <button id="exit">Exit</button>
+                <button id="continue">Continue</button>
+            </div>
+        </div>
+        
+        <!-- section formulmaire -->
+        <section class="form_container">
+            <p class="para"radius_cause>Javascript Quiz</p>
+            <div class="paragraphe_title"><p>Evaluate yours skills in javascript answering to the below questions which we specialy prepare for you</p></div>
+            <label for="name_field">Name</label>
+            <input type="text"  placeholder="leader" required name="name_field" id="name_field">
+            <label for="email_field">Email</label>
+            <input type="text" placeholder="leader@gmail.com" name="email_field" id="email_field">
+            <p class="error_message" id="error_message"></p>
+            <p class="errorr_message" id="errorr_message"></p>
+            <p class="success_message" id="successs_message"></p>
+            <p class="successs_message" id="success_message"></p>
+            <button class="start-quiz"  id="start-quiz">Start</button>
+        </section>
+
+        <!--    Quiz Section    -->
+        <div id="quiz">
+                        <!--     Quiz Questions  -->
+                        
+        <div id="question">
+            <h2 id="questionNo"></h2>
+            <h2 id="questionText"></h2>
+        </div>
+
+            <div id="quiz_header">
+                <div class="progress-bar"></div>
+                <h5>Amazing Quiz App</h5>
+                <div id="timer">
+                    
+                    <h6 id="time">60</h6>
+                </div>
+            </div>
+
+
+            <!--       Quiz Choices   -->
+
+            <div id="optionList">
+               <h4 class="choice_que" id="option1"></h4>
+                <span class="radius_cause"></span><h4 class="choice_que" id="option2"></h4>
+                <span class="radius_cause"></span><h4 class="choice_que" id="option3"></h4>
+                <span class="radius_cause"></span><h4 class="choice_que" id="option4"></h4>
+            </div>
+
+            <!--  Answers Section-->
+
+            <div id="answersSection">
+                <h3 id="total_correct">next</h3>
+                <h3 id="next_question">Next</h3>    
+            </div>
+            
+        </div>
+        <!--   Result Section  -->
+        <div id="result">
+            <h1 id="nametitle"></h1>
+            <h1 id="mailtitle"></h1>
+            <img src="imgs/success.png" class="image_succes"  id="image_succes"/>
+            <img src="imgs/failure.jpeg" class="failure_succes" id="failure_succes" />
+            <!-- <h6>You Are Completed The Quiz</h6> -->
+            <h6 id="points">You Got 4 Out Of 10</h6>
+            <button id="quit">Home</button>
+            <!-- <button id="startAgain">Start Quiz</button> -->
+        </div>
+    </div>
+    <script src="js/questions.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
